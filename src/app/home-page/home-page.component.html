@@ -1,0 +1,9 @@
+<h2>Lista de Empleados</h2>
+
+@if (cargando) {
+<div class="cargando-contenedor">
+    <img src="loading.gif" />
+    <p>Cargando empleados...</p>
+</div>
+}
+<app-listaempleados [empleados]="empleadosList"></app-listaempleados>

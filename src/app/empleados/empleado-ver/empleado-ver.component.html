@@ -1,0 +1,11 @@
+<div class="contenedor-ver">
+    <mat-card class="tarjeta-empleado">
+        <mat-card-title>Información del Empleado</mat-card-title>
+        <mat-card-content>
+            <p><strong>ID:</strong> {{ id }}</p>
+            <p><strong>Nombre:</strong> {{ empleado?.nombre }}</p>
+            <p><strong>Salario:</strong> {{ empleado?.sueldo| currency }}</p>
+            <p><strong>Fecha de Ingreso:</strong> {{ empleado?.fechaIngreso| date:'dd/MM/yyyy' }}</p>
+        </mat-card-content>
+    </mat-card>
+</div>

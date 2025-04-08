@@ -1,0 +1,10 @@
+.contenedor-ver {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.tarjeta-usuario {
+    width: 100%;
+    max-width: 500px;
+}

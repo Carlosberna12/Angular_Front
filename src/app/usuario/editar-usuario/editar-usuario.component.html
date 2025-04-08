@@ -1,0 +1,28 @@
+<div class="contenedor-edicion">
+    <form [formGroup]="form" (ngSubmit)="guardarCambios()" class="formulario">
+        <h2 class="titulo">Editar Usuario (ID: {{ id }})</h2>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Nombre de Usuario</mat-label>
+            <input matInput formControlName="userName" />
+            <mat-error *ngIf="form.get('userName')?.hasError('required')">
+                El nombre de usuario es obligatorio
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput type="email" formControlName="email" />
+            <mat-error *ngIf="form.get('email')?.hasError('required')">
+                El email es obligatorio
+            </mat-error>
+            <mat-error *ngIf="form.get('email')?.hasError('email')">
+                Email inválido
+            </mat-error>
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">
+            Guardar Cambios
+        </button>
+    </form>
+</div>

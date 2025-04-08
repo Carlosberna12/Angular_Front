@@ -1,0 +1,24 @@
+<div class="contenedor-edicion">
+    <form [formGroup]="form" (ngSubmit)="guardarCambios()" class="formulario">
+        <h2 class="titulo">Editar Empleado (ID: {{ id }})</h2>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Nombre</mat-label>
+            <input matInput formControlName="nombre">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Fecha de Ingreso</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="fechaIngreso">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Sueldo</mat-label>
+            <input matInput type="number" formControlName="sueldo">
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" type="submit">Guardar Cambios</button>
+    </form>
+</div>
